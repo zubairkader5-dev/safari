@@ -1152,6 +1152,9 @@ input:focus, select:focus, textarea:focus {
 }
 
 @media (max-width: 560px) {
+  .section { padding: 64px 0; }
+  .section-heading { margin-bottom: 30px; }
+  .section-footer-link { margin-top: 22px; }
   .hero, .page-photo-hero { height: 610px; min-height: 610px; }
   .hero-content { padding-top: 112px; padding-bottom: 42px; }
   .hero h1 { font-size: 3.35rem; max-width: 95%; }
@@ -1314,7 +1317,7 @@ input:focus, select:focus, textarea:focus {
   /* Two-column mosaics keep photography visual rather than list-like. */
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0,1fr));
-    grid-auto-rows: 145px;
+    grid-auto-rows: 138px;
     gap: 7px;
   }
   .gallery-grid__item:nth-child(8n + 1) { grid-column: span 2; grid-row: span 2; }
@@ -1324,12 +1327,12 @@ input:focus, select:focus, textarea:focus {
 
   .south-gallery-grid {
     grid-template-columns: repeat(2, minmax(0,1fr));
-    grid-auto-rows: 155px;
+    grid-auto-rows: 150px;
     gap: 7px;
   }
   .south-gallery-card:first-child { grid-column: span 2; grid-row: span 2; }
   .south-gallery-card:nth-child(4) { grid-row: span 2; }
-  .south-gallery-card:nth-child(6) { grid-column: span 2; grid-row: span 1; }
+  .south-gallery-card:nth-child(6) { grid-column: auto; grid-row: auto; }
 
   .gallery-grid__item figcaption,
   .south-gallery-card figcaption { left: 8px; bottom: 8px; font-size: .6rem; padding: 5px 7px; }
@@ -1361,6 +1364,28 @@ input:focus, select:focus, textarea:focus {
   }
   .faq-layout .faq-items summary { align-items: flex-start; font-size: .88rem; line-height: 1.35; }
   .faq-layout .faq-items details p { margin: 16px 0 0; font-size: .8rem; line-height: 1.55; }
+  .footer { padding: 58px 0 92px; }
+  .footer-grid { gap: 26px; }
+  .footer-brand > p { margin: 18px 0; }
+  .footer-links { gap: 7px; }
+  .footer-bottom {
+    margin-top: 34px;
+    gap: 8px;
+  }
+  .whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    justify-content: center;
+  }
+  .whatsapp-float > span {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .whatsapp-float small { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
