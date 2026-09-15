@@ -25,10 +25,10 @@ export function Hero() {
       <div className="hero-shade" />
       <div className="shell hero-content">
         <div className="hero-copy-block">
-          <h1>Private Guiding in Zambia’s <em>Wild Heart</em></h1>
+          <h1>Private Guiding in Zambia's <em>Wild Heart</em></h1>
           <p className="hero-lead">Experience Zambia through personalised safari adventures, expert private guiding and authentic encounters with wildlife, wilderness and the remarkable landscapes of the country.</p>
           <div className="hero-actions">
-            <Link href="/contact" className="button button--sand">Plan Your Safari <span>↗</span></Link>
+            <Link href="/contact" className="button button--sand">Plan Your Safari <span>&#8599;</span></Link>
             <Link href="/contact" className="button button--glass">Enquire Now</Link>
           </div>
         </div>

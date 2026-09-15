@@ -1210,7 +1210,10 @@ input:focus, select:focus, textarea:focus {
   padding-top: 150px;
   padding-bottom: 72px;
 }
-.hero-copy-block { max-width: 1050px; }
+.hero-copy-block {
+  max-width: 1050px;
+  margin-left: clamp(26px, 4vw, 74px);
+}
 .hero h1 {
   max-width: 1050px;
   font-size: clamp(3.7rem, 6.7vw, 7rem);
@@ -1301,6 +1304,7 @@ input:focus, select:focus, textarea:focus {
 @media (max-width: 560px) {
   .hero, .page-photo-hero { height: 610px; min-height: 610px; }
   .hero-content, .page-photo-hero__content { padding-top: 112px; padding-bottom: 42px; }
+  .hero-copy-block { margin-left: 0; }
   .hero h1, .page-photo-hero h1 {
     font-size: clamp(3rem, 13vw, 4rem);
     line-height: .97;
