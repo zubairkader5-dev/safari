@@ -15,7 +15,7 @@ export function Footer() {
         <div><p className="footer-label">Legal</p><div className="footer-links"><span>Privacy Policy - Required</span><span>Terms & Conditions - Required</span><span>POPIA Policy - To be confirmed with the website developer or legal adviser.</span></div></div>
         <div><p className="footer-label">Contact Us</p><p className="footer-small">{contact.physicalAddress}</p><p className="footer-small">{contact.postalAddress}</p><p className="footer-small">{contact.hours}</p></div>
       </div>
-      <div className="shell footer-bottom"><span>Wildpath Safaris and Tours Zambia Limited</span><span>Private guiding in Zambia's wild heart</span></div>
+      <div className="shell footer-bottom"><span>Wildpath Safaris and Tours Zambia Limited</span><span>Private guiding in Zambia's wild heart</span><span>Developed by AMAConsulting Services</span></div>
     </footer>
   );
 }
