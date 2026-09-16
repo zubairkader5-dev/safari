@@ -422,6 +422,7 @@ textarea { min-height: 100px; resize: vertical; }
 .experience-detail__copy li { padding: 10px 0 10px 18px; border-bottom: 1px solid var(--line); position: relative; font-size: .83rem; }
 .experience-detail__copy li:before { content: "—"; position: absolute; left: 0; color: #a98750; }
 .price-note { color: #7c817d; font-size: .75rem; margin-bottom: 24px; }
+.booking-button { margin-top: 2px; }
 
 .wildlife-strip { display: grid; grid-template-columns: repeat(4,1fr); height: 520px; }
 .wildlife-panel { position: relative; overflow: hidden; }
@@ -531,6 +532,7 @@ textarea { min-height: 100px; resize: vertical; }
   .experience-detail, .experience-detail--reverse { grid-template-columns: 1fr; gap: 36px; }
   .experience-detail--reverse .experience-detail__media { order: initial; }
   .experience-detail__media { height: 520px; }
+  .booking-button { width: 100%; }
   .wildlife-strip { grid-template-columns: 1fr 1fr; height: auto; }
   .wildlife-panel { height: 380px; }
   .mission-grid { grid-template-columns: 1fr; gap: 40px; }
