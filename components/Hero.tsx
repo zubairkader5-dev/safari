@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { imagery } from "@/lib/data";
 
 const heroSlides = [
@@ -13,10 +14,13 @@ export function Hero() {
     <section className="hero">
       <div className="hero-media" aria-hidden="true">
         {heroSlides.map((slide, index) => (
-          <img
+          <Image
             key={slide.src}
             src={slide.src}
             alt=""
+            fill
+            priority={index === 0}
+            sizes="100vw"
             className={`hero-slide hero-slide--${index + 1}`}
             style={{ objectPosition: slide.position }}
           />

@@ -1,7 +1,7 @@
 export const contact = {
   business: "Wildpath Safaris and Tours Zambia Limited",
-  tagline: "Private guiding in Zambia’s wild heart",
-  director: "Masuzyo Zimba – Director",
+  tagline: "Private guiding in Zambia's wild heart",
+  director: "Masuzyo Zimba - Director",
   phone: "+260 777730609",
   phoneHref: "tel:+260777730609",
   whatsapp: "https://wa.me/260777730609",
@@ -9,7 +9,7 @@ export const contact = {
   emailHref: "mailto:Wildpathsafaris2026@Gmail.com",
   physicalAddress: "South luangwa national park, Mfuwe, Zambia.",
   postalAddress: "P.O. Box 40, Mfuwe,Zambia",
-  hours: "Monday–Friday: 08:00–17:00; Saturday–Sunday: By appointment / safari operations"
+  hours: "Monday-Friday: 08:00-17:00; Saturday-Sunday: By appointment / safari operations"
 };
 
 export const nav = [
@@ -47,7 +47,7 @@ export const imagery = {
   bird: "/wildlife/1000195756.jpg"
 };
 
-export const welcomeParagraph = "Welcome to Wildpath Safaris and Tours Zambia Limited, where we believe a safari should be more than simply seeing wildlife—it should be a personal experience. Our focus is on private guiding and carefully designed safari experiences that allow guests to discover Zambia at their own pace. From remarkable wildlife encounters to the sounds, landscapes and stories of the African wilderness, we aim to create meaningful journeys through Zambia’s wild heart.";
+export const welcomeParagraph = "Welcome to Wildpath Safaris and Tours Zambia Limited, where we believe a safari should be more than simply seeing wildlife - it should be a personal experience. Our focus is on private guiding and carefully designed safari experiences that allow guests to discover Zambia at their own pace. From remarkable wildlife encounters to the sounds, landscapes and stories of the African wilderness, we aim to create meaningful journeys through Zambia's wild heart.";
 
 export const whyChoose = [
   ["Private and personalised experiences", "We focus on creating safari experiences around the interests and expectations of each guest."],
@@ -173,26 +173,65 @@ export const blogTopics = [
   { title: "Why Zambia Should Be on Every Safari Traveller's List", image: imagery.elephantHerd, alt: "Elephant herd in the wilderness" }
 ];
 
+export const sampleItineraries = [
+  {
+    days: "3 days",
+    title: "South Luangwa Private Introduction",
+    description: "A focused short safari for travellers who want flexible private guiding, classic game drives and time around the Luangwa River.",
+    highlights: ["Private morning and afternoon game drives", "Predator and elephant tracking", "Flexible photography stops"]
+  },
+  {
+    days: "5 days",
+    title: "Wildlife and Photography Safari",
+    description: "A slower-paced itinerary shaped around light, behaviour and patient sightings for guests who enjoy wildlife photography.",
+    highlights: ["Golden-hour game drives", "Behaviour-focused guiding", "Time for birds, landscapes and portraits"]
+  },
+  {
+    days: "7 days",
+    title: "Tailor-Made Zambia Safari",
+    description: "A custom private journey combining South Luangwa with wider Zambia safari interests, seasonal wildlife and personal travel goals.",
+    highlights: ["Custom route planning", "Private guide support", "Optional walking or specialist interests"]
+  }
+] as const;
+
+export const testimonials = [
+  {
+    quote: "The guiding felt personal, patient and deeply knowledgeable. Every drive had a sense of discovery.",
+    name: "Private safari guest",
+    detail: "South Luangwa"
+  },
+  {
+    quote: "Wildpath made the bush feel alive through behaviour, tracks, birds and the smaller details we would have missed.",
+    name: "Wildlife traveller",
+    detail: "Zambia safari"
+  },
+  {
+    quote: "A calm, flexible safari experience with space for photography, questions and unhurried sightings.",
+    name: "Photography guest",
+    detail: "Private guiding"
+  }
+] as const;
+
 export const galleryImages = [
-  { src: "/wildlife/1000195720.jpg", label: "Leopards", alt: "Leopard resting in a tree" },
-  { src: "/wildlife/1000195721.jpg", label: "Leopards", alt: "Leopard walking through dry woodland" },
-  { src: "/wildlife/1000195723.jpg", label: "Leopards", alt: "Young leopard sitting in the bush" },
-  { src: "/wildlife/1000195724.jpg", label: "Leopards", alt: "Young leopard walking on open ground" },
-  { src: "/wildlife/1000195725.jpg", label: "Leopards", alt: "Leopard resting on the ground" },
-  { src: "/wildlife/1000195718.jpg", label: "Lions", alt: "Male lion beside a river" },
-  { src: "/wildlife/1000195728.jpg", label: "Lions", alt: "Two lions resting in dry grass" },
-  { src: "/wildlife/1000195734.jpg", label: "Lions", alt: "Lioness with another lion behind her" },
-  { src: "/wildlife/1000195735.jpg", label: "Lions", alt: "Male lion resting in woodland" },
-  { src: "/wildlife/1000195745.jpg", label: "Lions", alt: "Male lion walking through the bush" },
-  { src: "/wildlife/1000195759.jpg", label: "Lions", alt: "Male lion portrait" },
-  { src: "/wildlife/1000195726.jpg", label: "Elephants", alt: "Elephant standing in woodland" },
-  { src: "/wildlife/1000195744.jpg", label: "Elephants", alt: "Elephant herd walking together" },
-  { src: "/wildlife/1000195760.jpg", label: "Elephants", alt: "Elephant family with a calf" },
-  { src: "/wildlife/1000195754.jpg", label: "Spotted hyenas", alt: "Spotted hyena resting on the ground" },
-  { src: "/wildlife/1000195762.jpg", label: "Spotted hyenas", alt: "Spotted hyenas together in the bush" },
-  { src: "/wildlife/1000195756.jpg", label: "Birds", alt: "Bird perched on a branch" },
-  { src: "/wildlife/1000195736.jpg", label: "Wildlife photographs", alt: "African buffalo standing in grassland" },
-  { src: "/wildlife/1000195737.jpg", label: "Wildlife photographs", alt: "Close portrait of an African buffalo" }
+  { src: "/wildlife/1000195720.jpg", label: "Leopard resting above the woodland", alt: "Leopard resting in a tree" },
+  { src: "/wildlife/1000195721.jpg", label: "Leopard moving through dry Luangwa woodland", alt: "Leopard walking through dry woodland" },
+  { src: "/wildlife/1000195723.jpg", label: "Young leopard watching from the bush", alt: "Young leopard sitting in the bush" },
+  { src: "/wildlife/1000195724.jpg", label: "Young leopard crossing open ground", alt: "Young leopard walking on open ground" },
+  { src: "/wildlife/1000195725.jpg", label: "Leopard resting after a sighting", alt: "Leopard resting on the ground" },
+  { src: "/wildlife/1000195718.jpg", label: "Male lion beside the Luangwa River", alt: "Male lion beside a river" },
+  { src: "/wildlife/1000195728.jpg", label: "Lions resting in winter grass", alt: "Two lions resting in dry grass" },
+  { src: "/wildlife/1000195734.jpg", label: "Lioness alert in the thicket", alt: "Lioness with another lion behind her" },
+  { src: "/wildlife/1000195735.jpg", label: "Male lion resting in woodland shade", alt: "Male lion resting in woodland" },
+  { src: "/wildlife/1000195745.jpg", label: "Male lion walking through the bush", alt: "Male lion walking through the bush" },
+  { src: "/wildlife/1000195759.jpg", label: "Male lion portrait in soft light", alt: "Male lion portrait" },
+  { src: "/wildlife/1000195726.jpg", label: "Elephant pausing in woodland", alt: "Elephant standing in woodland" },
+  { src: "/wildlife/1000195744.jpg", label: "Elephant herd moving together", alt: "Elephant herd walking together" },
+  { src: "/wildlife/1000195760.jpg", label: "Elephant family with young calf", alt: "Elephant family with a calf" },
+  { src: "/wildlife/1000195754.jpg", label: "Spotted hyena at rest", alt: "Spotted hyena resting on the ground" },
+  { src: "/wildlife/1000195762.jpg", label: "Spotted hyenas gathered in the bush", alt: "Spotted hyenas together in the bush" },
+  { src: "/wildlife/1000195756.jpg", label: "Birdlife along the safari route", alt: "Bird perched on a branch" },
+  { src: "/wildlife/1000195736.jpg", label: "Buffalo standing in grassland", alt: "African buffalo standing in grassland" },
+  { src: "/wildlife/1000195737.jpg", label: "Close buffalo portrait", alt: "Close portrait of an African buffalo" }
 ] as const;
 
 export const closingMessage = "Come beyond the ordinary. Experience Zambia through the eyes of a private guide and discover the wildlife, landscapes and stories that make Zambia's wilderness extraordinary.";

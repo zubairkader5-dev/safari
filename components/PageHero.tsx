@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function PageHero({
   eyebrow,
@@ -21,7 +22,7 @@ export function PageHero({
 }) {
   return (
     <section className="page-photo-hero">
-      <img className="page-photo-hero__image" src={image} alt={alt} style={{ objectPosition: imagePosition }} />
+      <Image className="page-photo-hero__image" src={image} alt={alt} fill priority sizes="100vw" style={{ objectPosition: imagePosition }} />
       <div className="page-photo-hero__shade" />
       <div className="shell page-photo-hero__content">
         {eyebrow ? <p className="eyebrow eyebrow--light">{eyebrow}</p> : null}
@@ -29,7 +30,7 @@ export function PageHero({
         {description ? <p>{description}</p> : null}
         {ctaHref && ctaLabel ? (
           <Link href={ctaHref} className="button button--sand page-photo-hero__cta">
-            {ctaLabel} <span>↗</span>
+            {ctaLabel} <span>&#8599;</span>
           </Link>
         ) : null}
       </div>

@@ -3,7 +3,7 @@ import { Hero } from "@/components/Hero";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { SafariForm } from "@/components/SafariForm";
 import { Logo } from "@/components/Logo";
-import { blogTopics, closingMessage, experiences, faqs, imagery, welcomeParagraph, whyChoose } from "@/lib/data";
+import { blogTopics, closingMessage, experiences, faqs, imagery, sampleItineraries, testimonials, welcomeParagraph, whyChoose } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -34,10 +34,28 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section itinerary-section">
+        <div className="shell">
+          <div className="section-heading section-heading--split"><div><p className="eyebrow">Sample Safaris</p><h2>Private safari ideas</h2></div><p>Every journey is tailored, but these sample structures help guests picture what a Wildpath safari can become.</p></div>
+          <div className="itinerary-grid">
+            {sampleItineraries.map((item) => <article className="itinerary-card" key={item.title}><span>{item.days}</span><h3>{item.title}</h3><p>{item.description}</p><ul>{item.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}</ul></article>)}
+          </div>
+        </div>
+      </section>
+
       <section className="guide-portrait-section">
         <div className="shell guide-portrait-grid">
-          <div className="guide-photo-placeholder"><div className="guide-initials">MZ</div><div className="guide-photo-note">Professional Photo: TO BE PROVIDED</div></div>
+          <div className="guide-photo-placeholder"><div className="guide-initials">MZ</div><div className="guide-photo-note">Professional guide portrait coming soon</div></div>
           <div className="guide-story"><p className="eyebrow eyebrow--light">Team</p><h2>Masuzyo Zimba</h2><p className="guide-role">Director / Safari Guide</p><p>Masuzyo Zimba is a Zambian safari professional with a strong passion for wildlife, conservation and guiding. His approach to safari is centred on personal experiences, wildlife interpretation and helping guests develop a deeper appreciation of Zambia's natural heritage.</p><Link href="/about" className="button button--sand">About Us <span>&#8599;</span></Link></div>
+        </div>
+      </section>
+
+      <section className="section testimonial-section">
+        <div className="shell">
+          <div className="section-heading section-heading--split"><div><p className="eyebrow">Guest Notes</p><h2>Personal, patient guiding</h2></div><p>Short guest-style highlights that reflect the experience Wildpath is built to provide.</p></div>
+          <div className="testimonial-grid">
+            {testimonials.map((item) => <blockquote className="testimonial-card" key={item.quote}><p>&ldquo;{item.quote}&rdquo;</p><footer><strong>{item.name}</strong><span>{item.detail}</span></footer></blockquote>)}
+          </div>
         </div>
       </section>
 

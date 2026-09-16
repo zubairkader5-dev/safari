@@ -213,6 +213,76 @@ p { color: #4f5b53; }
 .section-footer-link { margin-top: 28px; }
 .experiences-view-all { border-color: transparent; padding-inline: 0; }
 
+/* Sample itineraries and testimonials */
+.itinerary-section { background: var(--paper); }
+.itinerary-grid,
+.testimonial-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.itinerary-card,
+.testimonial-card {
+  margin: 0;
+  padding: 28px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--ivory) 11%, var(--paper));
+  min-height: 320px;
+}
+.itinerary-card > span {
+  display: inline-flex;
+  margin-bottom: 52px;
+  color: var(--orange);
+  font-size: .7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+.itinerary-card h3 {
+  font-size: 2.15rem;
+  margin-bottom: 13px;
+}
+.itinerary-card p,
+.testimonial-card p {
+  font-size: .88rem;
+}
+.itinerary-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.itinerary-card li {
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+  color: #675b55;
+  font-size: .78rem;
+  font-weight: 700;
+}
+.testimonial-section { background: var(--brown); color: var(--paper); }
+.testimonial-section .section-heading--split > p,
+.testimonial-card p { color: rgba(253,251,248,.72); }
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(253,251,248,.06);
+  border-color: rgba(253,251,248,.15);
+}
+.testimonial-card p {
+  font: 400 1.7rem/1.12 var(--serif);
+  letter-spacing: -.025em;
+}
+.testimonial-card footer {
+  display: grid;
+  gap: 2px;
+  margin-top: 42px;
+}
+.testimonial-card strong { font-size: .82rem; }
+.testimonial-card span {
+  color: var(--ivory);
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
 /* Destination */
 .destination-feature { min-height: 850px; position: relative; display: flex; align-items: center; overflow: hidden; background: #162218; }
 .destination-media, .destination-overlay { position: absolute; inset: 0; }
@@ -446,6 +516,8 @@ textarea { min-height: 100px; resize: vertical; }
   .section-heading--split { display: block; }
   .section-heading--split > p { width: auto; max-width: 650px; margin-top: 20px; }
   .experience-grid { grid-template-columns: 1fr; }
+  .itinerary-grid,
+  .testimonial-grid { grid-template-columns: 1fr 1fr; }
   .experience-card { height: 510px; }
   .destination-feature { min-height: 760px; }
   .fact-row { grid-template-columns: repeat(3,1fr); gap: 20px; }
@@ -478,7 +550,12 @@ textarea { min-height: 100px; resize: vertical; }
   .image-stack__large { width: 88%; height: 430px; }
   .image-stack__small { width: 53%; height: 230px; border-width: 8px; }
   .season-card { min-height: 470px; padding: 30px; }
-  .process-grid, .journal-grid, .values-grid, .activity-row { grid-template-columns: 1fr; }
+  .process-grid, .journal-grid, .values-grid, .activity-row,
+  .itinerary-grid, .testimonial-grid { grid-template-columns: 1fr; }
+  .itinerary-card,
+  .testimonial-card { min-height: auto; padding: 24px; }
+  .itinerary-card > span { margin-bottom: 30px; }
+  .testimonial-card p { font-size: 1.45rem; }
   .safari-form { padding: 26px; }
   .form-grid { grid-template-columns: 1fr; }
   .form-grid__wide { grid-column: auto; }
