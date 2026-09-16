@@ -62,8 +62,14 @@ export default function Home() {
       <section className="section gallery-preview-section">
         <div className="shell">
           <div className="section-heading section-heading--split"><div><p className="eyebrow">Gallery</p><h2>Gallery</h2></div><p>A curated look at Zambia's wildlife, landscapes and safari moments.</p></div>
-          <div className="home-gallery-rail">
-            {[imagery.lionGroup, imagery.elephantHerd, imagery.leopardRest, imagery.hyenaGroup, imagery.bird].map((src, i) => <div className="home-gallery-card" key={src}><img src={src} alt={["Lions", "Elephants", "Leopards", "Spotted hyenas", "Birds"][i]} /></div>)}
+          <div className="home-gallery-mosaic">
+            {[
+              { src: imagery.lionGroup, label: "Lions in winter grass", alt: "Lions resting in dry grass" },
+              { src: imagery.elephantHerd, label: "Elephants on the move", alt: "Elephant herd moving through the wilderness" },
+              { src: imagery.leopardRest, label: "Leopard at rest", alt: "Leopard resting during a wildlife sighting" },
+              { src: imagery.hyenaGroup, label: "Hyena clan", alt: "Spotted hyenas in the bush" },
+              { src: imagery.bird, label: "Birdlife in colour", alt: "Bird perched on a branch" }
+            ].map((item) => <figure className="home-gallery-card" key={item.src}><img src={item.src} alt={item.alt} /><figcaption>{item.label}</figcaption></figure>)}
           </div>
           <div className="section-footer-link"><Link href="/gallery" className="button button--forest">View All <span>&#8599;</span></Link></div>
         </div>

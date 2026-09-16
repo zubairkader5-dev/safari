@@ -1165,11 +1165,55 @@ input:focus, select:focus, textarea:focus {
 .exact-list li::before { content: "—"; position: absolute; left: 0; color: var(--orange); }
 
 .gallery-preview-section { background: color-mix(in srgb, var(--ivory) 12%, var(--paper)); }
-.home-gallery-rail { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
-.home-gallery-card { margin: 0; min-height: 340px; position: relative; overflow: hidden; background: var(--ink); }
-.home-gallery-card img { width: 100%; height: 100%; min-height: 340px; object-fit: cover; transition: transform .5s ease; }
-.home-gallery-card:hover img { transform: scale(1.025); }
-.home-gallery-card figcaption { position: absolute; left: 14px; bottom: 13px; z-index: 2; background: rgba(38,14,9,.76); color: var(--paper); padding: 7px 10px; font-size: .7rem; letter-spacing: .04em; }
+.home-gallery-mosaic {
+  display: grid;
+  grid-template-columns: 1.38fr .74fr .88fr;
+  grid-template-rows: 230px 230px;
+  gap: 12px;
+}
+.home-gallery-card {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--ink);
+}
+.home-gallery-card:first-child { grid-row: span 2; }
+.home-gallery-card:nth-child(2) { grid-row: span 2; }
+.home-gallery-card:nth-child(5) { grid-column: 3; }
+.home-gallery-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(0deg, rgba(38,14,9,.74), rgba(38,14,9,.06) 55%),
+    linear-gradient(90deg, rgba(38,14,9,.32), rgba(38,14,9,0) 52%);
+  opacity: .88;
+}
+.home-gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .65s ease;
+}
+.home-gallery-card:hover img { transform: scale(1.035); }
+.home-gallery-card figcaption {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2;
+  color: var(--paper);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+.home-gallery-card:first-child figcaption {
+  max-width: 330px;
+  font: 400 2.45rem/1 var(--serif);
+  letter-spacing: -.03em;
+}
 
 .gallery-masonry { columns: 4 250px; column-gap: 12px; }
 .gallery-masonry__item { break-inside: avoid; margin: 0 0 12px; position: relative; overflow: hidden; background: var(--ink); }
@@ -1210,21 +1254,13 @@ input:focus, select:focus, textarea:focus {
   .hero-actions .button { width: 100%; padding-inline: 14px; }
   .faq-layout { grid-template-columns: 1fr; gap: 30px; }
   .closing-band__inner { grid-template-columns: 1fr; align-items: start; }
-  .home-gallery-rail {
-    grid-template-columns: none;
-    grid-auto-flow: column;
-    grid-auto-columns: 72vw;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    margin-left: -15px;
-    margin-right: -15px;
-    padding-left: 15px;
-    padding-right: 14vw;
+  .home-gallery-mosaic {
+    grid-template-columns: 1.15fr .85fr;
+    grid-template-rows: 260px 210px 210px;
   }
-  .home-gallery-rail::-webkit-scrollbar { display: none; }
-  .home-gallery-card { scroll-snap-align: start; min-height: 380px; }
-  .home-gallery-card img { min-height: 380px; }
+  .home-gallery-card:first-child { grid-column: span 2; grid-row: span 1; }
+  .home-gallery-card:nth-child(2) { grid-row: span 2; }
+  .home-gallery-card:nth-child(5) { grid-column: auto; }
   .gallery-masonry { columns: 2 220px; }
 }
 
@@ -1239,8 +1275,18 @@ input:focus, select:focus, textarea:focus {
   .hero-actions { grid-template-columns: 1fr 1fr; width: 100%; gap: 8px; }
   .hero-actions .button { min-height: 48px; font-size: .74rem; }
   .section-brand-mark .logo__image { width: 155px; }
-  .home-gallery-rail { grid-auto-columns: 82vw; }
-  .home-gallery-card, .home-gallery-card img { min-height: 360px; }
+  .home-gallery-mosaic {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 230px 150px 150px;
+    gap: 8px;
+  }
+  .home-gallery-card:first-child { grid-column: span 2; grid-row: span 1; }
+  .home-gallery-card:nth-child(2),
+  .home-gallery-card:nth-child(3),
+  .home-gallery-card:nth-child(4),
+  .home-gallery-card:nth-child(5) { grid-column: auto; grid-row: auto; }
+  .home-gallery-card figcaption { left: 11px; right: 11px; bottom: 11px; font-size: .62rem; }
+  .home-gallery-card:first-child figcaption { max-width: 260px; font-size: 1.85rem; }
   .gallery-masonry { columns: 1; }
   .gallery-masonry__item { margin-bottom: 10px; }
   .closing-band { padding: 70px 0; }
