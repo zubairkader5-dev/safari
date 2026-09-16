@@ -24,3 +24,9 @@ pnpm-debug.log*
 # typescript
 tsconfig.tsbuildinfo
 next-env.d.ts
+
+# local media generation scratch
+wa_frames_*/
+video-frame.jpg
+whatsapp-clean-frame.jpg
+Whatsapp.original-watermarked.mp4
