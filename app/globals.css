@@ -1167,7 +1167,7 @@ input:focus, select:focus, textarea:focus {
 .gallery-preview-section { background: color-mix(in srgb, var(--ivory) 12%, var(--paper)); }
 .home-gallery-mosaic {
   display: grid;
-  grid-template-columns: 1.38fr .74fr .88fr;
+  grid-template-columns: 1.2fr .78fr .92fr;
   grid-template-rows: 230px 230px;
   gap: 12px;
 }
@@ -1178,9 +1178,11 @@ input:focus, select:focus, textarea:focus {
   isolation: isolate;
   background: var(--ink);
 }
-.home-gallery-card:first-child { grid-row: span 2; }
-.home-gallery-card:nth-child(2) { grid-row: span 2; }
-.home-gallery-card:nth-child(5) { grid-column: 3; }
+.home-gallery-card:first-child { grid-column: 1; grid-row: 1 / span 2; }
+.home-gallery-card:nth-child(2) { grid-column: 2; grid-row: 1 / span 2; }
+.home-gallery-card:nth-child(3) { grid-column: 3; grid-row: 1; }
+.home-gallery-card:nth-child(4) { grid-column: 3; grid-row: 2; }
+.home-gallery-card:nth-child(5) { display: none; }
 .home-gallery-card::after {
   content: "";
   position: absolute;
@@ -1260,7 +1262,8 @@ input:focus, select:focus, textarea:focus {
   }
   .home-gallery-card:first-child { grid-column: span 2; grid-row: span 1; }
   .home-gallery-card:nth-child(2) { grid-row: span 2; }
-  .home-gallery-card:nth-child(5) { grid-column: auto; }
+  .home-gallery-card:nth-child(3),
+  .home-gallery-card:nth-child(4) { grid-column: 2; grid-row: auto; }
   .gallery-masonry { columns: 2 220px; }
 }
 
@@ -1283,8 +1286,7 @@ input:focus, select:focus, textarea:focus {
   .home-gallery-card:first-child { grid-column: span 2; grid-row: span 1; }
   .home-gallery-card:nth-child(2),
   .home-gallery-card:nth-child(3),
-  .home-gallery-card:nth-child(4),
-  .home-gallery-card:nth-child(5) { grid-column: auto; grid-row: auto; }
+  .home-gallery-card:nth-child(4) { grid-column: auto; grid-row: auto; }
   .home-gallery-card figcaption { left: 11px; right: 11px; bottom: 11px; font-size: .62rem; }
   .home-gallery-card:first-child figcaption { max-width: 260px; font-size: 1.85rem; }
   .gallery-masonry { columns: 1; }
