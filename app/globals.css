@@ -1313,7 +1313,16 @@ input:focus, select:focus, textarea:focus {
   .home-gallery-card:first-child figcaption { max-width: 260px; font-size: 1.85rem; }
   .gallery-masonry { columns: 1; }
   .gallery-masonry__item { margin-bottom: 10px; }
-  .closing-band { padding: 70px 0; }
+  .closing-band { padding: 58px 0 64px; }
+  .closing-band__inner { gap: 34px; }
+  .closing-band .eyebrow { font-size: .66rem; line-height: 1.35; }
+  .closing-band h2 {
+    max-width: 96%;
+    font-size: clamp(2.2rem, 10.4vw, 3.05rem);
+    line-height: 1.02;
+    margin-bottom: 14px;
+  }
+  .closing-band p:not(.eyebrow) { font-size: .92rem; }
   .closing-band .button { width: 100%; }
   .journal-grid, .journal-grid--large {
     grid-auto-columns: 84vw;
