@@ -551,9 +551,28 @@ textarea { min-height: 100px; resize: vertical; }
   .image-stack__small { width: 53%; height: 230px; border-width: 8px; }
   .season-card { min-height: 470px; padding: 30px; }
   .process-grid, .journal-grid, .values-grid, .activity-row,
-  .itinerary-grid, .testimonial-grid { grid-template-columns: 1fr; }
+  .itinerary-grid { grid-template-columns: 1fr; }
+  .testimonial-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 86vw;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 2px 15px 10px;
+  }
+  .testimonial-grid::-webkit-scrollbar { display: none; }
   .itinerary-card,
   .testimonial-card { min-height: auto; padding: 24px; }
+  .testimonial-card {
+    scroll-snap-align: start;
+    min-height: 265px;
+  }
   .itinerary-card > span { margin-bottom: 30px; }
   .testimonial-card p { font-size: 1.45rem; }
   .safari-form { padding: 26px; }
