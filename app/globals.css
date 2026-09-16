@@ -777,6 +777,7 @@ input:focus, select:focus, textarea:focus {
     grid-auto-columns: minmax(340px, 72vw);
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
     overscroll-behavior-inline: contain;
     gap: 12px;
     margin-inline: -15px;
@@ -877,12 +878,13 @@ input:focus, select:focus, textarea:focus {
   .experience-grid::-webkit-scrollbar,
   .process-grid::-webkit-scrollbar,
   .journal-grid::-webkit-scrollbar,
+  .journal-grid--large::-webkit-scrollbar,
   .activity-row::-webkit-scrollbar,
   .season-grid::-webkit-scrollbar { display: none; }
 
   .experience-grid { grid-auto-columns: 84vw; }
   .process-grid { grid-auto-columns: 78vw; }
-  .journal-grid, .journal-grid--large { grid-auto-columns: 82vw; }
+  .journal-grid, .journal-grid--large { grid-auto-columns: min(82vw, 390px); }
   .activity-row { grid-auto-columns: 78vw; margin-top: 34px; margin-bottom: 34px; }
   .season-grid { grid-auto-columns: 87vw; }
 
@@ -1313,7 +1315,19 @@ input:focus, select:focus, textarea:focus {
   .gallery-masonry__item { margin-bottom: 10px; }
   .closing-band { padding: 70px 0; }
   .closing-band .button { width: 100%; }
+  .journal-grid, .journal-grid--large {
+    grid-auto-columns: 84vw;
+    gap: 12px;
+    padding-bottom: 10px;
+  }
+  .journal-card {
+    scroll-snap-align: center;
+    min-height: 0;
+  }
   .journal-card__image { height: 230px; }
+  .journal-card__content { padding: 24px; }
+  .journal-card__content h2,
+  .journal-card__content h3 { font-size: 1.9rem; }
 }
 
 
